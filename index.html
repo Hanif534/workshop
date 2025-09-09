@@ -2,121 +2,200 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{Portfolio}</title>
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hanif | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
 
-        header {
-            background: black;
-            color: greenyellow;
-            padding: 15px;
-            text-align: center;
-        }
+    /* Header Section */
+    .header {
+      background: #741e7f;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-        nav ul {
-            display: flex;
-            padding: 20px;
-            list-style: none;
-            justify-content: center;
-        }
+    .logo span {
+      font-size: 26px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
 
-        nav li {
-            margin: 0 15px;
-        }
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-        }
+    .nav span {
+      cursor: pointer;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
 
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 10px;
-        }
+    .nav span:hover {
+      color: #38bdf8;
+    }
 
-        .card {
-            flex: 1 1 300px !important;
-            margin: 10px;
-            padding: 20px;
-            border: 1px solid black;
-            border-radius: 10px;
-        }
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-        footer {
-            background: black;
-            color: white;
-            text-align: center;
-        }
+    .hero span {
+      display: block;
+      margin: 10px 0;
+    }
 
-        @media (max-width:600px) {
-            max-width: 100px;
+    .hero .title {
+      font-size: 36px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
 
-        }
+    .hero .subtitle {
+      font-size: 18px;
+      color: #94a3b8;
+    }
 
-        @media (min-width:601px) and (max-width:1024px) {
-            .card {
-                flex: 1 1 45%;
-                max-width: 45%;
+    .btn {
+      margin-top: 20px;
+      background: #38bdf8;
+      color: black;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
 
-            }
+    .btn:hover {
+      background: #0ea5e9;
+    }
 
-        }
-        @media (min-width:1025px) {
-            .card {
-                flex: 1 1 30%;
-                max-width: 30%;
+    /* Projects Section */
+    .projects {
+      padding: 50px 20px;
+    }
 
-            }
+    .projects .section-title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 40px;
+      color: #38bdf8;
+    }
 
-        }
-    </style>
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
 
+    .card {
+      flex: 1 1 300px;
+      max-width: 300px;
+      background: #3782c4;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
 
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card span {
+      display: block;
+      margin: 8px 0;
+    }
+
+    .card .card-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    .card .card-desc {
+      font-size: 14px;
+      color: #cbd5e1;
+    }
+
+    /* Footer Section */
+    .footer {
+      background: #1e293b;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 600px) {
+      .hero .title {
+        font-size: 28px;
+      }
+
+      .projects .section-title {
+        font-size: 22px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <div class="head">
-            <div>
-                <h1>Prudhvi</h1>
-            </div>
-            <div>
-                <nav>
-                    <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Project</a></li>
-                        <li><a href="#">Contact</a></li>
+  <!-- Header -->
+  <div class="header">
+    <div class="logo"><span>Hanif</span></div>
+    <div class="nav">
+      <span>About</span>
+      <span>Projects</span>
+      <span>Contact</span>
+    </div>
+  </div>
 
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <main>
-        <div class="container">
-            <div class="card">
-                <h2>Project 1</h2>
-                <p>Disc</p>
-            </div>
-            <div class="card">
-                <h2>Project 2</h2>
-                <p>Disc</p>
-            </div>
-            <div class="card">
-                <h2>Project 3</h2>
-                <p>Disc</p>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <div><span>&copy; Hanif Technology Pvt Ltd</span></div>
-    </footer>
+  <!-- Hero -->
+  <div class="hero">
+    <span class="title">Hi, I'm Hanif</span>
+    <span class="subtitle">Aspiring Web Developer | Passionate about Code & Design</span>
+    <span class="btn">View My Work</span>
+  </div>
+
+  <!-- Projects -->
+  <div class="projects">
+    <span class="section-title">My Projects</span>
+    <div class="card-container">
+      <div class="card">
+        <span class="card-title">Project 1</span>
+        <span class="card-desc">A responsive portfolio website using HTML, CSS & Flexbox.</span>
+      </div>
+      <div class="card">
+        <span class="card-title">Project 2</span>
+        <span class="card-desc">A JavaScript-based Calculator with a modern UI.</span>
+      </div>
+      <div class="card">
+        <span class="card-title">Project 3</span>
+        <span class="card-desc">A To-Do List App with Firebase integration.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <span>&copy; 2025 Hanif </span>
+  </div>
 </body>
 
 </html>
